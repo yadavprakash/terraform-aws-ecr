@@ -19,7 +19,7 @@ To use this module, you should have Terraform installed and configured for AWS. 
 # Example : private_ecr
 ```hcl
 module "private_ecr" {
-  source             = "git::https://github.com/opsstation/terraform-aws-ecr.git?ref=v1.0.0"
+  source             = "git::https://github.com/yadavprakash/terraform-aws-ecr.git?ref=v1.0.0"
   enable_private_ecr = true
   name               = local.name
   environment        = local.environment
@@ -31,7 +31,7 @@ module "private_ecr" {
 # Example : public_ecr
 ```hcl
 module "public_ecr" {
-  source                   = "git::https://github.com/opsstation/terraform-aws-ecr.git?ref=v1.0.0"
+  source                   = "git::https://github.com/yadavprakash/terraform-aws-ecr.git?ref=v1.0.0"
   enable_public_ecr        = true
   name                     = local.name
   environment              = local.environment
@@ -48,14 +48,14 @@ module "public_ecr" {
 
 
 ## Examples
-For detailed examples on how to use this module, please refer to the [examples](https://github.com/opsstation/terraform-aws-ecr/tree/master/example) directory within this repository.
+For detailed examples on how to use this module, please refer to the [examples](https://github.com/yadavprakash/terraform-aws-ecr/tree/master/example) directory within this repository.
 
 ## License
-This Terraform module is provided under the **MIT** License. Please see the [LICENSE](https://github.com/opsstation/terraform-aws-ecr/blob/master/LICENSE) file for more details.
+This Terraform module is provided under the **MIT** License. Please see the [LICENSE](https://github.com/yadavprakash/terraform-aws-ecr/blob/master/LICENSE) file for more details.
 
 ## Author
 Your Name
-Replace **MIT** and **opsstation** with the appropriate license and your information. Feel free to expand this README with additional details or usage instructions as needed for your specific use case.
+Replace **MIT** and **yadavprakash** with the appropriate license and your information. Feel free to expand this README with additional details or usage instructions as needed for your specific use case.
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
@@ -75,7 +75,7 @@ Replace **MIT** and **opsstation** with the appropriate license and your informa
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_labels"></a> [labels](#module\_labels) | git::https://github.com/opsstation/terraform-aws-labels.git | v1.0.0 |
+| <a name="module_labels"></a> [labels](#module\_labels) | git::https://github.com/yadavprakash/terraform-aws-labels.git | v1.0.0 |
 
 ## Resources
 
@@ -105,7 +105,7 @@ Replace **MIT** and **opsstation** with the appropriate license and your informa
 | <a name="input_image_tag_mutability"></a> [image\_tag\_mutability](#input\_image\_tag\_mutability) | The tag mutability setting for the repository. | `string` | `"IMMUTABLE"` | no |
 | <a name="input_kms_key"></a> [kms\_key](#input\_kms\_key) | The ARN of the KMS key to use when encryption\_type is `KMS`. If not specified, uses the default AWS managed key for ECR | `string` | `null` | no |
 | <a name="input_label_order"></a> [label\_order](#input\_label\_order) | Label order, e.g. `name`,`application`. | `list(any)` | <pre>[<br>  "name",<br>  "environment"<br>]</pre> | no |
-| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'opsStation' | `string` | `""` | no |
+| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'yadavprakash' | `string` | `""` | no |
 | <a name="input_max_image_count"></a> [max\_image\_count](#input\_max\_image\_count) | How many Docker Image versions AWS ECR will store. | `number` | `10` | no |
 | <a name="input_max_untagged_image_count"></a> [max\_untagged\_image\_count](#input\_max\_untagged\_image\_count) | How many Untagged Docker Image versions AWS ECR will store. | `number` | `1` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name  (e.g. `app` or `cluster`). | `string` | `""` | no |

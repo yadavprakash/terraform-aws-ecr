@@ -15,3 +15,5 @@ module "private_ecr" {
   scan_on_push       = true
   max_image_count    = 7
 }
+
+
