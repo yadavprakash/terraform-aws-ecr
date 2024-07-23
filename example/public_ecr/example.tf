@@ -20,3 +20,5 @@ module "public_ecr" {
     architectures     = ["x86"]
   }
 }
+
+

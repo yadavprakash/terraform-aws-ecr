@@ -20,7 +20,7 @@ variable "label_order" {
 variable "managedby" {
   type        = string
   default     = ""
-  description = "ManagedBy, eg 'opsStation' "
+  description = "ManagedBy, eg 'yadavprakash' "
 }
 
 variable "tags" {
